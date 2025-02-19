@@ -1,0 +1,32 @@
+<aside class="sidebar">
+  <img
+    src="assets/images/main-logo.svg"
+    alt="Proposals Logo"
+    class="sidebar__logo"
+  />
+  <nav class="sidebar__navigation">
+    <ul class="sidebar__navigation__list">
+      @for (sidebarItem of SIDEBAR_ITEMS; track $index) {
+      <li class="sidebar__navigation__list__item">
+        <a
+          #rla="routerLinkActive"
+          [routerLink]="sidebarItem.route"
+          routerLinkActive="sidebar__navigation__list__item__link--active"
+          class="sidebar__navigation__list__item__link"
+        >
+          <img
+            [src]="
+              './assets/icons/sidebar/' +
+              sidebarItem.icon +
+              (rla.isActive ? '-active' : '') +
+              '.svg'
+            "
+            alt="Navigation item icon"
+          />
+          <p>{{ sidebarItem.label }}</p>
+        </a>
+      </li>
+      }
+    </ul>
+  </nav>
+</aside>
