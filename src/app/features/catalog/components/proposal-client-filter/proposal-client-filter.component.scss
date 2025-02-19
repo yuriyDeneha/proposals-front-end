@@ -1,0 +1,38 @@
+.client {
+  background-color: var(--bg-1);
+  padding: var(--medium);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: var(--medium-small);
+  transition: all 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--grey-50);
+  }
+
+  &__data {
+    display: flex;
+    flex-direction: column;
+    gap: var(--small);
+
+    &__title {
+      color: var(--black-300);
+      font-size: var(--medium-small);
+    }
+
+    &__name,
+    &__email {
+      font-size: var(--font-size-14);
+    }
+
+    &__name {
+      font-weight: 700;
+    }
+  }
+
+  i {
+    color: var(--black-300);
+  }
+}

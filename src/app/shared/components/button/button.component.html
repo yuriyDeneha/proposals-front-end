@@ -1,0 +1,15 @@
+<p-button
+  [disabled]="disabled"
+  [text]="!showBorder"
+  [ngClass]="classList"
+  class="btn"
+  [pTooltip]="tooltip"
+  [tooltipPosition]="tooltipPosition"
+  [outlined]="outlined"
+  [severity]="severity"
+  (onClick)="handleClick($event)"
+>
+  <span class="button-content">
+    <ng-content></ng-content>
+  </span>
+</p-button>

@@ -1,0 +1,14 @@
+<div class="filters">
+  <div class="filters__row">
+    <app-dropdown-filter
+      [options]="SALES_PERSONS_OPTIONS"
+      label="Salesperson"
+      placeholder="Select salesperson"
+    />
+    <app-calendar-filter label="Expiry" placeholder="No Expiry" />
+  </div>
+  <div class="filters__row">
+    <app-proposal-client-filter />
+    <app-proposal-location-filter />
+  </div>
+</div>

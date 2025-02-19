@@ -1,0 +1,22 @@
+<section class="proposal">
+  <app-proposal-details-header />
+  <div class="proposal__content">
+    <app-tree-navigation [navigationItems]="CATALOG_NAVIGATION_ITEMS" />
+    <div class="proposal__content__body">
+      <app-proposal-details-filters />
+      <app-proposal-history />
+      <app-proposal-builder />
+      <div class="proposal__content__body__areas">
+        <div class="proposal__content__body__areas__header">
+          <h2 class="proposal__content__body__areas__header__title">
+            Areas & Items
+          </h2>
+          <app-button [severity]="ButtonSeverity.Secondary"
+            >+ New Area</app-button
+          >
+        </div>
+        <app-proposal-living-room />
+      </div>
+    </div>
+  </div>
+</section>

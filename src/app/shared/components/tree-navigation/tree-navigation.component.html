@@ -1,0 +1,8 @@
+<p-tree
+  [value]="navigationItems"
+  styleClass="w-full md:w-[30rem]"
+  selectionMode="single"
+  [(selection)]="selectedItem"
+  (onNodeSelect)="handleNodeSelection($event)"
+  (onNodeUnselect)="handleNodeSelection($event)"
+/>

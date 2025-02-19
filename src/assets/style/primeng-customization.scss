@@ -1,0 +1,272 @@
+.btn {
+  display: flex;
+  align-items: center;
+
+  .p-button {
+    gap: var(--medium-big);
+    padding: 0 var(--medium);
+    width: fit-content;
+    border-radius: var(--medium-big);
+  }
+
+  &--long {
+    max-width: 100%;
+    min-width: 360px;
+
+    button {
+      width: 100% !important;
+    }
+  }
+
+  &--full-width {
+    max-width: 100%;
+    min-width: 100%;
+
+    button {
+      width: 100% !important;
+    }
+  }
+
+  &--transparent {
+    .p-button {
+      color: var(--black-100) !important;
+      background: transparent !important;
+      border: none;
+      padding: 11px 16px;
+
+      .button-content {
+        font-weight: 400;
+        color: var(--black-200);
+      }
+    }
+  }
+
+  &--small .p-button {
+    height: 25px;
+  }
+
+  &--big .p-button {
+    height: var(--extra-large);
+  }
+
+  &--icon .p-button {
+    padding: 10px;
+    border-radius: 100%;
+    width: var(--extra-large);
+  }
+
+  &--no-padding .p-button {
+    padding: 0;
+    height: fit-content;
+  }
+}
+
+.p-button-primary {
+  background-color: var(--primary) !important;
+  border: none !important;
+  color: var(--white) !important;
+}
+
+.p-button-secondary {
+  background-color: var(--secondary) !important;
+  border: none !important;
+  color: var(--black-100) !important;
+}
+
+.p-button-contrast {
+  background-color: var(--accent) !important;
+  border: none !important;
+  color: var(--white) !important;
+}
+
+.p-tree {
+  background-color: transparent !important;
+  padding: 0 !important;
+  border-left: 1px solid var(--border-color);
+
+  .p-tree-node-content {
+    color: var(--black-200);
+    padding: var(--small) 0;
+    padding-left: var(--medium);
+    border-radius: 0;
+    transition: all 0.1s;
+  }
+
+  .p-tree-node-content.p-tree-node-selectable:not(.p-tree-node-selected):hover {
+    background-color: var(--bg-1);
+    color: var(--black-200);
+  }
+
+  .p-tree-node-toggle-button {
+    display: none;
+  }
+
+  .p-tree-node-content.p-tree-node-selected {
+    background-color: transparent;
+    color: var(--black-100);
+    font-weight: 600;
+    border-left: 2px solid var(--black-100);
+  }
+
+  .p-tree-node-children {
+    padding-inline-start: 0;
+
+    .p-tree-node-label {
+      padding-left: var(--medium-big);
+    }
+  }
+}
+
+p-select.filter {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+
+  .p-select-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--black-100);
+  }
+
+  .p-select-label.p-placeholder {
+    color: var(--black-300);
+  }
+
+  .p-icon {
+    color: var(--black-100);
+  }
+
+  .p-select-overlay {
+    background-color: var(--bg-1);
+    border: none;
+  }
+
+  .p-select-option:not(.p-disabled) {
+    color: var(--black-100) !important;
+  }
+
+  .p-select-option:not(.p-disabled).p-focus {
+    background: var(--bg-2);
+  }
+
+  .p-select-option.p-select-option-selected {
+    background-color: transparent;
+    font-weight: 500;
+  }
+}
+
+p-datepicker.filter {
+  .p-inputtext {
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--black-100);
+
+    &::placeholder {
+      color: var(--black-300);
+    }
+  }
+  .p-datepicker .p-datepicker-panel {
+    background-color: var(--bg-1);
+    border: none;
+  }
+
+  .p-datepicker-header {
+    background-color: transparent;
+    border-bottom: none;
+
+    .p-icon,
+    .p-datepicker-select-month,
+    .p-datepicker-select-year,
+    .p-datepicker-decade {
+      color: var(--black-100);
+    }
+
+    .p-datepicker-select-month,
+    .p-datepicker-select-year {
+      &:hover {
+        color: var(--white);
+      }
+    }
+  }
+
+  .p-datepicker-month,
+  .p-datepicker-day,
+  .p-datepicker-weekday,
+  .p-datepicker-year {
+    color: var(--black-100);
+  }
+
+  .p-datepicker-today > .p-datepicker-day {
+    color: var(--white);
+  }
+
+  .p-datepicker-day-selected {
+    background-color: var(--primary);
+    color: var(--white);
+  }
+}
+
+.panel {
+  .p-panel-header,
+  .p-panel {
+    color: var(--black-100);
+    border: none;
+  }
+
+  .p-panel {
+    border-radius: var(--medium-small);
+  }
+
+  &--grey .p-panel {
+    background-color: var(--bg-1);
+  }
+
+  &--white .p-panel {
+    background-color: var(--white);
+
+    .p-button-text.p-button-secondary {
+      background-color: var(--white) !important;
+    }
+  }
+}
+
+.p-datatable {
+  th {
+    border-color: var(--border-color) !important;
+  }
+
+  td {
+    border: none !important;
+  }
+
+  th,
+  td {
+    background-color: var(--white) !important;
+    color: var(--black-100) !important;
+
+    .p-checkbox-box {
+      border: 1px solid var(--border-color) !important;
+      background-color: var(--white);
+    }
+
+    .p-checkbox:not(.p-disabled):has(.p-checkbox-input:hover) .p-checkbox-box {
+      background-color: var(--bg-1);
+    }
+
+    .p-checkbox-checked .p-checkbox-box {
+      background-color: var(--primary) !important;
+    }
+
+    .p-iconwrapper svg {
+      color: var(--white) !important;
+    }
+  }
+}
+
+.p-inputnumber-input {
+  background: var(--white) !important;
+  border-color: var(--border-color) !important;
+  color: var(--black-100) !important;
+}

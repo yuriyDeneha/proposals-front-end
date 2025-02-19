@@ -1,0 +1,33 @@
+.proposal {
+  display: flex;
+  flex-direction: column;
+
+  &__content {
+    padding: var(--medium-big);
+    display: flex;
+    gap: var(--medium-big);
+
+    app-tree-navigation {
+      min-width: 230px;
+    }
+
+    &__body {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: var(--medium-big);
+      max-height: calc(100vh - 128px - 40px);
+      overflow-y: auto;
+
+      &__areas {
+        margin-top: var(--big);
+
+        &__header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}

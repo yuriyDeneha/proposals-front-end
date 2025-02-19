@@ -1,0 +1,29 @@
+:host {
+  display: inline-block;
+
+  &:has(.btn--full-width) {
+    width: 100%;
+  }
+
+  ::ng-deep {
+    .p-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+p-button {
+  display: flex;
+}
+
+.button-content {
+  width: 100%;
+  font-size: var(--font-size-14);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: max-content;
+}

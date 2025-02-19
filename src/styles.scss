@@ -1,1 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+@use "./assets/style/common.scss";
+@use "./assets/style/variables";
+@use "./assets/style/primeng-customization.scss";
+@use "primeicons/primeicons.css";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap");
