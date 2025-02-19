@@ -72,3 +72,41 @@
   border: none !important;
   color: var(--black-100) !important;
 }
+
+.p-tree {
+  background-color: transparent !important;
+  padding: 0 !important;
+  border-left: 1px solid var(--border-color);
+
+  .p-tree-node-content {
+    color: var(--black-200);
+    padding: var(--small) 0;
+    padding-left: var(--medium);
+    border-radius: 0;
+    transition: all 0.1s;
+  }
+
+  .p-tree-node-content.p-tree-node-selectable:not(.p-tree-node-selected):hover {
+    background-color: var(--bg-1);
+    color: var(--black-200);
+  }
+
+  .p-tree-node-toggle-button {
+    display: none;
+  }
+
+  .p-tree-node-content.p-tree-node-selected {
+    background-color: transparent;
+    color: var(--black-100);
+    font-weight: 600;
+    border-left: 2px solid var(--black-100);
+  }
+
+  .p-tree-node-children {
+    padding-inline-start: 0;
+
+    .p-tree-node-label {
+      padding-left: var(--medium-big);
+    }
+  }
+}

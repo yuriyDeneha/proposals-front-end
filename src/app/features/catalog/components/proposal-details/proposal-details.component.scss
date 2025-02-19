@@ -1,0 +1,8 @@
+.proposal {
+  display: flex;
+  flex-direction: column;
+
+  &__content {
+    padding: var(--medium-big);
+  }
+}
