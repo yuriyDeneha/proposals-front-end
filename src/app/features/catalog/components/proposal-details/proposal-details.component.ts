@@ -3,6 +3,8 @@ import { ProposalDetailsHeaderComponent } from '../proposal-details-header/propo
 import { TreeNavigationComponent } from '../../../../shared/components/tree-navigation/tree-navigation.component';
 import { CATALOG_NAVIGATION_ITEMS } from '../../consts/navigation-items.const';
 import { ProposalDetailsFiltersComponent } from '../proposal-details-filters/proposal-details-filters.component';
+import { ProposalHistoryComponent } from '../proposal-history/proposal-history.component';
+import { ProposalBuilderComponent } from '../proposal-builder/proposal-builder.component';
 
 @Component({
   selector: 'app-proposal-details',
@@ -10,6 +12,8 @@ import { ProposalDetailsFiltersComponent } from '../proposal-details-filters/pro
     ProposalDetailsHeaderComponent,
     TreeNavigationComponent,
     ProposalDetailsFiltersComponent,
+    ProposalHistoryComponent,
+    ProposalBuilderComponent,
   ],
   templateUrl: './proposal-details.component.html',
   styleUrl: './proposal-details.component.scss',

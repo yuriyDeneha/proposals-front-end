@@ -1,0 +1,21 @@
+<p-panel
+  class="panel"
+  expandIcon="pi pi-angle-down"
+  collapseIcon="pi pi-angle-right"
+  [ngClass]="{
+    'panel--grey': style === CardStyle.Grey,
+    'panel--white': CardStyle.White
+  }"
+  [toggleable]="true"
+  [collapsed]="true"
+>
+  <ng-template #header>
+    @if (isCustomHeader) {
+    <ng-content select="[header]" />
+    } @else if (title) {
+    <h3 class="title">{{ title }}</h3>
+    }
+  </ng-template>
+
+  <ng-content></ng-content>
+</p-panel>

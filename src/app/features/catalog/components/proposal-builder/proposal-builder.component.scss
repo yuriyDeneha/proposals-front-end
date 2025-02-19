@@ -1,0 +1,25 @@
+.builder-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: var(--medium-small) 0;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: var(--small);
+
+    p {
+      font-size: var(--small);
+      font-weight: 600;
+      color: var(--black-300);
+    }
+  }
+
+  &__subtitle {
+    font-size: var(--font-size-14);
+    color: var(--black-300);
+    font-weight: 600;
+  }
+}

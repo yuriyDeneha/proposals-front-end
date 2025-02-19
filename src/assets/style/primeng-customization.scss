@@ -201,3 +201,19 @@ p-datepicker.filter {
     color: var(--white);
   }
 }
+
+.panel {
+  .p-panel-header,
+  .p-panel {
+    color: var(--black-100);
+    border: none;
+  }
+
+  .p-panel {
+    border-radius: var(--medium-small);
+  }
+
+  &--grey .p-panel {
+    background-color: var(--bg-1);
+  }
+}
