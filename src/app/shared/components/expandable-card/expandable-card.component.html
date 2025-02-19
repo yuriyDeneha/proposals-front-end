@@ -4,7 +4,7 @@
   collapseIcon="pi pi-angle-right"
   [ngClass]="{
     'panel--grey': style === CardStyle.Grey,
-    'panel--white': CardStyle.White
+    'panel--white': style === CardStyle.White
   }"
   [toggleable]="true"
   [collapsed]="true"

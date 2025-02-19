@@ -1,0 +1,132 @@
+:host ::ng-deep {
+  app-expandable-card .p-panel-content {
+    padding: 0;
+  }
+
+  .p-inputnumber-input {
+    width: 100%;
+  }
+}
+
+app-expandable-card {
+  margin-top: var(--medium);
+  display: block;
+}
+
+.living-room-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--small) 0;
+  &__actions {
+    display: flex;
+    gap: var(--small);
+  }
+}
+
+.living-room {
+  border-top: 1px solid var(--border-color);
+
+  &__description {
+    padding: var(--medium-big);
+    display: flex;
+    flex-direction: column;
+    gap: var(--medium);
+
+    &__title {
+      font-size: var(--medium-small);
+      font-weight: 600;
+      color: var(--black-300);
+    }
+
+    &__notes,
+    &__text {
+      font-size: var(--font-size-14);
+    }
+
+    &__notes {
+      color: var(--primary);
+      margin-top: var(--medium-big);
+    }
+  }
+
+  .product-info-cell {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--medium-small);
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      gap: var(--extra-small);
+      .name {
+        font-weight: 700;
+        font-size: var(--font-size-14);
+      }
+
+      .desc {
+        font-size: var(--medium-small);
+      }
+
+      .subdesc {
+        font-size: 10px;
+        color: var(--black-300);
+        font-style: italic;
+      }
+
+      &__tags {
+        display: flex;
+        align-items: center;
+        gap: var(--small);
+        font-size: 10px;
+
+        .tag {
+          padding: 2px var(--small);
+          border-radius: var(--small);
+        }
+
+        .transparent-tag {
+          border: 1px solid var(--border-color);
+        }
+
+        .blue-tag {
+          background-color: #4e86fa1a;
+          color: #4e86fa;
+        }
+      }
+    }
+  }
+
+  .price-cell {
+    display: flex;
+    align-items: center;
+    gap: var(--small);
+
+    &__price {
+      display: flex;
+      flex-direction: column;
+      gap: var(--extra-small);
+      .msrp,
+      .profit {
+        font-size: 10px;
+        color: var(--black-300);
+      }
+
+      .price {
+        font-size: var(--font-size-14);
+      }
+    }
+  }
+
+  .qty-input {
+    width: 36px;
+  }
+
+  &__footer {
+    padding: var(--medium-big);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: flex-end;
+  }
+}

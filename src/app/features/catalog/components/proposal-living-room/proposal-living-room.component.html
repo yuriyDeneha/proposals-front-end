@@ -1,0 +1,90 @@
+<app-expandable-card [style]="CardStyle.White" [isCustomHeader]="true">
+  <div header class="living-room-header">
+    <h3>Living Room</h3>
+    <div class="living-room-header__actions">
+      <app-button [severity]="ButtonSeverity.Contrast">+ Add Item</app-button>
+      <app-button [severity]="ButtonSeverity.Secondary">+ Add Labor</app-button>
+      <app-button
+        [severity]="ButtonSeverity.Secondary"
+        [style]="ButtonStyle.Icon"
+        tooltip="See More"
+        ><i class="pi pi-ellipsis-v"></i
+      ></app-button>
+    </div>
+  </div>
+  <div class="living-room">
+    <div class="living-room__description">
+      <p class="living-room__description__title">CLIENT DESCRIPTION</p>
+      <p class="living-room__description__text">
+        In the Living Room, we will replace the existing TV with a new Samsung
+        Frame TV and integrate it with a Control4 system for enhanced control.
+        The audio setup will include a Sonos Arc soundbar and a subwoofer.
+        Additional equipment like an Apple TV and Blu-ray player will be
+        installed in a built-in cabinet.
+      </p>
+      <p class="living-room__description__notes">
+        Add Internal / Installer Notes
+      </p>
+    </div>
+    <p-table
+      [value]="PRODUCTS"
+      [(selection)]="selectedProducts"
+      dataKey="id"
+      [tableStyle]="{ 'min-width': '50rem' }"
+    >
+      <ng-template #header>
+        <tr>
+          <th style="width: 4rem"><p-tableHeaderCheckbox /></th>
+          <th>ITEMS</th>
+          <th>SELL PRICE</th>
+          <th>QTY</th>
+          <th>TOTAL</th>
+        </tr>
+      </ng-template>
+      <ng-template #body let-product>
+        <tr>
+          <td>
+            <p-tableCheckbox [value]="product" />
+          </td>
+          <td>
+            <div class="product-info-cell">
+              <img [src]="product.image" alt="Product Image" />
+              <div class="product-info-cell__info">
+                <p class="name">{{ product.name }}</p>
+                <p class="desc">{{ product.desc1 }}</p>
+                <p class="subdesc">{{ product.desc2 }}</p>
+                <div class="product-info-cell__info__tags">
+                  <p class="transparent-tag tag">Custom</p>
+                  <p class="transparent-tag tag">Tax Exempt</p>
+                  <p class="blue-tag tag">Price Decreased on Change Order 1</p>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="price-cell">
+              <div class="price-cell__price">
+                <p class="msrp">{{ product.msrp | currency }}</p>
+                <p class="price">{{ product.totalPrice | currency }}</p>
+                <p class="profit">{{ product.profit }} %</p>
+              </div>
+
+              <img src="./assets/icons/ui/ic-percent.svg" alt="Percent Icon" />
+            </div>
+          </td>
+          <td>
+            <p-inputnumber
+              [maxlength]="1"
+              class="qty-input"
+              inputId="integeronly"
+            />
+          </td>
+          <td>{{ 0 | currency }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+    <div class="living-room__footer">
+      <h3>Living Room Total {{ 0 | currency }}</h3>
+    </div>
+  </div>
+</app-expandable-card>
