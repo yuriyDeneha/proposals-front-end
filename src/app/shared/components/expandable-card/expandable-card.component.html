@@ -7,7 +7,7 @@
     'panel--white': style === CardStyle.White
   }"
   [toggleable]="true"
-  [collapsed]="true"
+  [collapsed]="isCollapsed"
 >
   <ng-template #header>
     @if (isCustomHeader) {

@@ -13,5 +13,6 @@ export class ExpandableCardComponent {
   @Input() title: string = '';
   @Input() isCustomHeader = false;
   @Input() style: CardStyle = CardStyle.Grey;
+  @Input() isCollapsed = true;
   protected readonly CardStyle = CardStyle;
 }
