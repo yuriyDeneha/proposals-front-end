@@ -1,0 +1,11 @@
+.filters {
+  &__row {
+    display: flex;
+    gap: var(--medium-big);
+
+    app-dropdown-filter,
+    app-calendar-filter {
+      width: 50%;
+    }
+  }
+}

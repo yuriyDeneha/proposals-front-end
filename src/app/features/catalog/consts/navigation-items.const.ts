@@ -12,6 +12,7 @@ export const CATALOG_NAVIGATION_ITEMS: TreeNode[] = [
   {
     key: 'areasItems',
     label: 'Areas & Items',
+    expanded: true,
     children: [
       {
         key: 'livingRoom',
@@ -23,7 +24,7 @@ export const CATALOG_NAVIGATION_ITEMS: TreeNode[] = [
       },
       {
         key: 'reallyLengthyAreaName',
-        label: 'Really Lengthy Area Name',
+        label: 'Really Long Area Name',
       },
     ],
   },

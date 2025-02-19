@@ -110,3 +110,94 @@
     }
   }
 }
+
+p-select.filter {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+
+  .p-select-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--black-100);
+  }
+
+  .p-select-label.p-placeholder {
+    color: var(--black-300);
+  }
+
+  .p-icon {
+    color: var(--black-100);
+  }
+
+  .p-select-overlay {
+    background-color: var(--bg-1);
+    border: none;
+  }
+
+  .p-select-option:not(.p-disabled) {
+    color: var(--black-100) !important;
+  }
+
+  .p-select-option:not(.p-disabled).p-focus {
+    background: var(--bg-2);
+  }
+
+  .p-select-option.p-select-option-selected {
+    background-color: transparent;
+    font-weight: 500;
+  }
+}
+
+p-datepicker.filter {
+  .p-inputtext {
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--black-100);
+
+    &::placeholder {
+      color: var(--black-300);
+    }
+  }
+  .p-datepicker .p-datepicker-panel {
+    background-color: var(--bg-1);
+    border: none;
+  }
+
+  .p-datepicker-header {
+    background-color: transparent;
+    border-bottom: none;
+
+    .p-icon,
+    .p-datepicker-select-month,
+    .p-datepicker-select-year,
+    .p-datepicker-decade {
+      color: var(--black-100);
+    }
+
+    .p-datepicker-select-month,
+    .p-datepicker-select-year {
+      &:hover {
+        color: var(--white);
+      }
+    }
+  }
+
+  .p-datepicker-month,
+  .p-datepicker-day,
+  .p-datepicker-weekday,
+  .p-datepicker-year {
+    color: var(--black-100);
+  }
+
+  .p-datepicker-today > .p-datepicker-day {
+    color: var(--white);
+  }
+
+  .p-datepicker-day-selected {
+    background-color: var(--primary);
+    color: var(--white);
+  }
+}

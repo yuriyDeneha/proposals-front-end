@@ -4,5 +4,15 @@
 
   &__content {
     padding: var(--medium-big);
+    display: flex;
+    gap: var(--medium-big);
+
+    app-tree-navigation {
+      min-width: 230px;
+    }
+
+    &__body {
+      width: 100%;
+    }
   }
 }

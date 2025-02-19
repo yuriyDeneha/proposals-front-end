@@ -1,0 +1,17 @@
+.calendar-filter {
+  display: flex;
+  background-color: var(--bg-1);
+  padding: var(--small) var(--medium);
+  gap: var(--small);
+  border-radius: var(--large);
+  align-items: center;
+
+  &__label {
+    font-size: var(--medium-small);
+    color: var(--black-300);
+  }
+
+  p-select {
+    width: 100%;
+  }
+}
