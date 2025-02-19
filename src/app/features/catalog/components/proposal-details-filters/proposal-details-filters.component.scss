@@ -1,4 +1,7 @@
 .filters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--medium-big);
   &__row {
     display: flex;
     gap: var(--medium-big);
@@ -7,5 +10,10 @@
     app-calendar-filter {
       width: 50%;
     }
+  }
+
+  app-proposal-client-filter,
+  app-proposal-location-filter {
+    width: 50%;
   }
 }
