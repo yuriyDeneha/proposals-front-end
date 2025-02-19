@@ -1,0 +1,58 @@
+.header {
+  padding: var(--medium-big);
+  display: flex;
+  flex-direction: column;
+  gap: var(--medium);
+
+  &__back-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--extra-small);
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__left {
+      display: flex;
+      flex-direction: column;
+      gap: var(--small);
+      &__title {
+        font-size: var(--medium-large);
+        font-weight: 700;
+      }
+
+      &__subtitle {
+        font-size: var(--medium-small);
+        font-weight: 600;
+      }
+    }
+
+    &__right {
+      display: flex;
+      align-items: center;
+      gap: var(--small);
+
+      app-button:first-child {
+        margin-right: var(--medium);
+      }
+
+      .btn-container {
+        display: flex;
+        align-items: center;
+        gap: var(--small);
+
+        .pi-circle-fill {
+          font-size: var(--small);
+          color: var(--black-300);
+        }
+
+        .pi-eye-slash {
+          color: var(--black-300);
+        }
+      }
+    }
+  }
+}

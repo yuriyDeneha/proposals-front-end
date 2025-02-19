@@ -1,0 +1,41 @@
+<header class="header">
+  <app-button [style]="ButtonStyle.Transparent" [isSmall]="true"
+    ><div class="header__back-btn">
+      <i class="pi pi-angle-left"></i> Proposals
+    </div></app-button
+  >
+  <div class="header__content">
+    <div class="header__content__left">
+      <h3 class="header__content__left__title">Proposal #1234 • $12,345.67</h3>
+      <p class="header__content__left__subtitle">
+        Customer Name • Proposal Name
+      </p>
+    </div>
+    <div class="header__content__right">
+      <app-button
+        [severity]="ButtonSeverity.Secondary"
+        [size]="ButtonSize.Small"
+      >
+        <div class="btn-container">
+          <i class="pi pi-circle-fill"></i>
+          Draft
+          <i class="pi pi-eye-slash"></i>
+        </div>
+      </app-button>
+      <app-button>
+        <div class="btn-container">
+          <i class="pi pi-pen-to-square"></i>
+          Email & Submit
+        </div>
+      </app-button>
+      <app-button [severity]="ButtonSeverity.Secondary"> Preview </app-button>
+      <app-button
+        [severity]="ButtonSeverity.Secondary"
+        [style]="ButtonStyle.Icon"
+        tooltip="See more"
+      >
+        <i class="pi pi-ellipsis-v"></i>
+      </app-button>
+    </div>
+  </div>
+</header>

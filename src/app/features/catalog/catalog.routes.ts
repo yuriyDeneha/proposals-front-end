@@ -1,9 +1,14 @@
 import { Routes } from '@angular/router';
-import { CatalogPageComponent } from './components/catalog-page/catalog-page.component';
+import { ProposalDetailsComponent } from './components/proposal-details/proposal-details.component';
 
 export const catalogRoutes: Routes = [
   {
+    path: 'proposal/:id',
+    component: ProposalDetailsComponent,
+  },
+  {
     path: '',
-    component: CatalogPageComponent,
+    redirectTo: 'proposal/1',
+    pathMatch: 'full',
   },
 ];
