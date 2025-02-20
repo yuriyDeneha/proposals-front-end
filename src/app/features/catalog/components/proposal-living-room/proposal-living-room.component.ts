@@ -37,7 +37,7 @@ export class ProposalLivingRoomComponent {
   qtyFormArray: FormArray<FormControl<number | null>> = new FormArray([
     ...PRODUCTS_LIST.map(() => new FormControl<number | null>(0)),
   ]);
-  selectedProducts: WritableSignal<any[]> = signal([]);
+  selectedProducts: WritableSignal<Product[]> = signal([]);
   readonly totalPrice = computed(() => {
     const selectedProducts = this.selectedProducts();
     const formValue = this.formValue();
